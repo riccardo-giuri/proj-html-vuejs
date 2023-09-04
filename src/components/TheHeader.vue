@@ -49,14 +49,14 @@ export default {
     <header>
         <div class="secondaryNav d-flex justify-content-between">
             <div class="container d-flex justify-content-between align-items-center">
-                <ul class="d-flex gap-4 m-0">
-                <li v-for="contact in secondaryNav.contacts">
-                    <a href="#">
-                        <i class="contactIcon" :class= contact.icon></i>
-                    </a>
+                <ul class="d-flex gap-4 m-0 text-light">
+                    <li v-for="contact in secondaryNav.contacts">
+                        <a href="#">
+                            <i class="contactIcon" :class= contact.icon></i>
+                        </a>
 
-                    <span> {{ contact.name }}</span>
-                </li>
+                        <span> {{ contact.name }}</span>
+                    </li>
                 </ul>
 
                 <ul class="iconList d-flex gap-2 m-0">
@@ -90,14 +90,8 @@ export default {
                             </ul>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                        <li class="nav-item" v-for="link in primaryNav.Links">
+                            <a class="nav-link" href="#">{{ link.name }}</a>
                         </li>
                     </ul>
 
@@ -120,6 +114,10 @@ export default {
         padding: 0 0px 0 40px;
         font-size: 21px;
         font-weight: 500;
+
+        a:hover {
+            color: map-get($map: $colorPalette, $key: "orange");
+        }
     }
 
     .btn-primary {
@@ -156,5 +154,11 @@ export default {
     .iconContainer {
         padding: 1px 5px;
         border-radius: 5px;
+    }
+
+    .nav-link {
+        color: #0000007a;
+        font-size: 21px;
+        font-weight: 500;
     }
 </style>
