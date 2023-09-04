@@ -9,9 +9,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <TheHeader></TheHeader>
-  </div>
+  <TheHeader></TheHeader>
 </template>
 
 <style lang="scss">

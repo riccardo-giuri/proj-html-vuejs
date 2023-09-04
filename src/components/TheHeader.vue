@@ -24,7 +24,22 @@ export default {
                 buttons: [
                     { name: "Get in Touch!"}
                 ]
-            }        
+            },   
+            
+            secondaryNav: {
+                contacts: [
+                    { name: "info@example.com", icon: "fa-solid fa-envelope"},
+                    { name: "+1(817)901 3377", icon: "fa-solid fa-phone"},
+                ],
+
+                icons: [
+                    {code: "fa-brands fa-facebook-square", color: "#303fbf"},
+                    {code: "fa-brands fa-pinterest-p", color: "#be2c4c"},
+                    {code: "fa-brands fa-twitter", color: "#7ccfd3"},
+                    {code: "fa-brands fa-linkedin-in", color: "#0663cf"},
+                    {code: "fa-brands fa-instagram", color: "#a721b3"}
+                ]
+            }
         }
     }
 }
@@ -32,8 +47,32 @@ export default {
 
 <template>
     <header>
+        <div class="secondaryNav d-flex justify-content-between">
+            <div class="container d-flex justify-content-between align-items-center">
+                <ul class="d-flex gap-4 m-0">
+                <li v-for="contact in secondaryNav.contacts">
+                    <a href="#">
+                        <i class="contactIcon" :class= contact.icon></i>
+                    </a>
+
+                    <span> {{ contact.name }}</span>
+                </li>
+                </ul>
+
+                <ul class="iconList d-flex gap-2 m-0">
+                    <li v-for="icon in secondaryNav.icons">
+                        <a href="#">
+                            <span class="iconContainer" :style="{ 'backgroundColor': icon.color}"><i :class= icon.code style="color: white;"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+
         <div class="primaryNav">
-            <nav class="navbar justify-content-between">
+            <div class="container">
+                <nav class="navbar justify-content-between">
                 <a class="navbar-brand" href="index.html">
                     <img src="../assets/logo.png" alt="">
                 </a>  
@@ -64,9 +103,8 @@ export default {
 
                     <button class="btn btn-primary " v-for="button in primaryNav.buttons"> {{ button.name }}</button>
                 </div>
-
-
             </nav>
+            </div>
         </div>
     </header>
 </template>
@@ -91,5 +129,32 @@ export default {
         padding: 12px 25px;
         font-size: 21px;
         font-weight: 500;
+    }
+
+    .contactIcon {
+        color: map-get($map: $colorPalette, $key: "orange");
+        padding-right: 8px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .socialIcon {
+        padding-right: 8px;
+    }
+
+    .secondaryNav {
+        background-color: map-get($map: $colorPalette, $key: "mossBrown");
+        min-height: 55px;
+    }
+
+    .iconList {
+        padding-right: 15px;
+    }
+
+    .iconContainer {
+        padding: 1px 5px;
+        border-radius: 5px;
     }
 </style>
