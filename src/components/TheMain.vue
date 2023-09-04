@@ -2,12 +2,14 @@
 import MainSliderSection from "./MainSliderSection.vue";
 import WelcomeSection from "./WelcomeSection.vue";
 import ServiceSection from "./ServiceSection.vue";
+import ChooseUsSection from "./ChooseUsSection.vue";
 
 export default {
     components: {
         MainSliderSection,
         WelcomeSection,
-        ServiceSection
+        ServiceSection,
+        ChooseUsSection
     }
 }
 </script>
@@ -18,6 +20,8 @@ export default {
     <WelcomeSection></WelcomeSection>
 
     <ServiceSection></ServiceSection>
+
+    <ChooseUsSection></ChooseUsSection>
     
 </template>
 
