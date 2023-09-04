@@ -3,13 +3,15 @@ import MainSliderSection from "./MainSliderSection.vue";
 import WelcomeSection from "./WelcomeSection.vue";
 import ServiceSection from "./ServiceSection.vue";
 import ChooseUsSection from "./ChooseUsSection.vue";
+import ReviewSection from "./ReviewSection.vue";
 
 export default {
     components: {
         MainSliderSection,
         WelcomeSection,
         ServiceSection,
-        ChooseUsSection
+        ChooseUsSection,
+        ReviewSection
     }
 }
 </script>
@@ -22,6 +24,8 @@ export default {
     <ServiceSection></ServiceSection>
 
     <ChooseUsSection></ChooseUsSection>
+
+    <ReviewSection></ReviewSection>
     
 </template>
 
