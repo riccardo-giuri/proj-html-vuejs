@@ -161,4 +161,8 @@ export default {
         font-size: 21px;
         font-weight: 500;
     }
+
+    button:hover {
+        background: #173b67;
+    }
 </style>

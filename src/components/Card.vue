@@ -49,6 +49,10 @@ export default {
         background-color: map-get($map: $colorPalette, $key: "orange");
         border-radius: 99px 99px 99px 99px;
         padding: 20px 15px 20px 15px;
+
+        &:hover {
+            background-color: map-get($map: $colorPalette, $key: "mossBrown");
+        }
     }
 
     .petImg {

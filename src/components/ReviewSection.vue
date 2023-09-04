@@ -175,6 +175,10 @@ export default {
             width: 39px;
             padding: 6px;
             background-color: map-get($map: $colorPalette, $key: "orange");
+
+            &:hover {
+                background-color: map-get($map: $colorPalette, $key: "mossBrown");
+            }
         }
     }
 </style>

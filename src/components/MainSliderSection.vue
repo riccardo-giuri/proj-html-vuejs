@@ -63,4 +63,8 @@ export default {
         background: #70d0f7;
         border-radius: 7px;
     }
+
+    button:hover {
+        background: #173b67;
+    }
 </style>
